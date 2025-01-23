@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body id="app">
+    <div class="head" @click="goHome">Ray Zhao</div>
+    
+    <div id="nav">
+      <ul>
+        <li id="link" @click="Projects">Projects</li>
+        <li id="link" @click="IFOTD">Iyad's Fact of the Day</li>
+        <li id="link" @click="Blog">Blog</li>
+      </ul>
+    </div>
+
+    <div id="content">
+      <p v-if="Home">Hi! I'm Ray, a junior at UIUC studying aerospace engineering. </p>
+      <p v-if="showProjects">My Projects</p>
+      <p v-if="showIFOTD">IFOTD</p>
+      <p v-if="showBlog">Blog</p>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
